@@ -1,0 +1,42 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply bg-white text-navy font-sans antialiased;
+    font-feature-settings: 'cv11', 'ss01';
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-bold tracking-tight;
+  }
+}
+
+@layer components {
+  .container-rsipl {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+  .hero-grid-bg {
+    background-image:
+      linear-gradient(rgba(30, 111, 217, 0.08) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(30, 111, 217, 0.08) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .section-pad {
+    @apply py-16 md:py-24;
+  }
+  .rsipl-input {
+    @apply w-full rounded-lg border border-navy-100 bg-white px-4 py-2.5 text-sm text-navy shadow-sm transition-colors placeholder:text-navy-200 focus:border-electric-500 focus:outline-none focus:ring-2 focus:ring-electric-200;
+  }
+  .rsipl-label {
+    @apply mb-1.5 block text-sm font-semibold text-navy;
+  }
+  .rsipl-checkbox {
+    @apply h-4 w-4 rounded border-navy-200 text-electric-600 focus:ring-electric-500;
+  }
+}
